@@ -1,8 +1,8 @@
 cask "thepia" do
-  version "0.1.0"
-  sha256 "2372dc470c642c9914609250e572792f9acf2e576e1c1979cd07b7a10bdf07a4"
+  version "0.1.1"
+  sha256 "ebc2a72d3b1bd8f1c1efd4cf0b43681a24bb492aa8347a9d5cb2db4139b66afb"
 
-  url "https://cdn.thepia.com/cli/#{version}/thepia-#{version}-x86_64.dmg"
+  url "https://cdn.thepia.com/cli/#{version}/thepia-#{version}-universal.dmg"
   name "thepia"
   desc "Terminal tools (cli, agentd, hwd) in a notarized .app"
   homepage "https://github.com/thepia/cli"
@@ -16,8 +16,7 @@ cask "thepia" do
   binary "#{appdir}/thepia.app/Contents/Resources/bin/thepia"
 
   caveats <<~EOS
-    This 0.1.0 build is x86_64 (Intel). On Apple Silicon it runs via Rosetta 2
-    (install with: softwareupdate --install-rosetta). A universal build is planned.
+    Universal build: runs natively on Intel and Apple Silicon.
 
     The daemons (thepia-agentd, thepia-hwd) ship inside thepia.app and are launched
     by the `thepia` command; they are not placed on PATH themselves.
