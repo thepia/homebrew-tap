@@ -5,6 +5,7 @@ distributed as a notarized, stapled macOS `.app`.
 
 ```sh
 brew tap thepia/tap
+brew trust thepia/tap     # recent Homebrew requires trusting a third-party tap once
 brew install --cask thepia
 thepia --version
 ```
