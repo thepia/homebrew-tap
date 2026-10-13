@@ -7,7 +7,7 @@ cask "thepia" do
   desc "Terminal tools (cli, agentd, hwd) in a notarized .app"
   homepage "https://github.com/thepia/cli"
 
-  depends_on macos: :big_sur
+  depends_on macos: ">= :big_sur"
 
   app "thepia.app"
   # The CLI on PATH is the in-bundle exec-shim, never a symlink straight to the Mach-O: it resolves its
